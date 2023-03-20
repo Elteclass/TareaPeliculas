@@ -7,10 +7,19 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
-        public string 
+        public string titulo;
+        public int año;
+        public string país;
+        public string directos;
+
         private List<Actor> actores = new List<Actor>();
         
         //Constructores
+        public Pelicula (string t, int a)
+        {
+            titulo = t;
+            año = a;
+        }
      
         //Métodos
      
