@@ -7,8 +7,9 @@ namespace Pelicula
     public class Pelicula
     {
         //Campos
+        public string 
         private List<Actor> actores = new List<Actor>();
-
+        
         //Constructores
      
         //Métodos
@@ -45,7 +46,7 @@ namespace Pelicula
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello");
+
         }
     }
 }
