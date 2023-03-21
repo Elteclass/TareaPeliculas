@@ -21,7 +21,7 @@ namespace Pelicula
         }
         public Pelicula(string titulo, Int16 año)
         {
-            
+
         }
      
         //Métodos
@@ -48,21 +48,35 @@ namespace Pelicula
             Console.WriteLine($"{titulo} {año}");
         }
 
+        public void AgregaActor(Actor actor)
+        {
+            actores.Add(actor);
+        }
 
+        public void ImprimeActores()
+        {
+
+        }
     }
 
     public class Actor
     {
         //Propiedades
-
+        public string Nombre;
+        public Int16 Año;
         //Constructores
+        public Actor( string nom, Int16 a)
+        {
+            Nombre = nom;
+            Año = a;
+        }
 
 
         //Métodos 
-        /*public void Imprime()
+        public void Imprime()
         {
             Console.WriteLine($"{Nombre} ({Año})");
-        }*/
+        }
     }
 
     // Puedes probar tu código en Main() pero lo importante
@@ -84,6 +98,29 @@ namespace Pelicula
             p1.SetTitulo("La La Land");
             p1.SetAño(2016);
             Console.WriteLine("{0}({1})", p1.GetTitulo(), p1.GetAño());
+
+            //Lista de peliculas
+            List <string> peliculas = new List<string>();
+
+            peliculas.Add("Jobs");
+            peliculas.Add("Noche del demonio");
+            peliculas.Add("Forest Gump");
+            peliculas.Add("El naúfrago");
+            peliculas.Add("La monja");
+
+            Console.WriteLine ("Las peliculas de la lista son:");
+
+            foreach (var peli in peliculas)
+            {
+                Console.WriteLine(peli);
+            }
+
+            //Lista de actores
+            Pelicula p1 = new Pelicula("La La Land", 2016);
+            p1.AgregaActor(new Actor("Ryan Gosling", 1980));
+            p1.AgregaActor(new Actor("Emma Stone", 1988));
+
+            p1.ImprimeActores();
             
         }
     }
