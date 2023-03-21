@@ -68,7 +68,7 @@ namespace Pelicula
         {
             foreach (var act in actores)
             {
-                Console.WriteLine("{0} {1}", act.Getnombre(), act.Getaño());
+                Console.WriteLine("{0} ({1})", act.Getnombre(), act.Getaño());
             }
 
         }
