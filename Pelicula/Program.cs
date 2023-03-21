@@ -19,10 +19,12 @@ namespace Pelicula
         {
 
         }
-        public Pelicula(string titulo, Int16 año)
+        public Pelicula(string t, Int16 a, string p, string d)
         {
-            this.titulo = titulo;
-            this.año = año;
+            titulo = t;
+            año = a;
+            país = p;
+            director = d;
         }
      
         //Métodos
@@ -58,7 +60,7 @@ namespace Pelicula
         {
             foreach (var act in actores)
             {
-                Console.WriteLine("{0}, {1}", act.Getnombre, act.Getaño);
+                Console.WriteLine("{0}, {1}", act.Getnombre(), act.Getaño());
             }
 
         }
@@ -77,17 +79,17 @@ namespace Pelicula
         }
 
         //Métodos 
-        public void Setnombre(string n)
+        public void Setnombre(string nom)
         {
-            Nombre = n;
-        }
-        public void Setaño(Int16 y)
-        {
-            Año = y;
+            Nombre = nom;
         }
         public string Getnombre()
         {
             return Nombre;
+        }
+        public void Setaño(Int16 a)
+        {
+            Año = a;
         }
         public Int16 Getaño()
         {
@@ -136,7 +138,7 @@ namespace Pelicula
             }
 
             //Lista de actores
-            Pelicula p1 = new Pelicula("La La Land", 2016);
+            //Pelicula p1 = new Pelicula("La La Land", 2016);
             p1.AgregaActor(new Actor("Ryan Gosling", 1980));
             p1.AgregaActor(new Actor("Emma Stone", 1988));
 
