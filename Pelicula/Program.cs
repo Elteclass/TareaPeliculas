@@ -15,6 +15,14 @@ namespace Pelicula
         private List<Actor> actores = new List<Actor>();
         
         //Constructores
+        public Pelicula()
+        {
+
+        }
+        public Pelicula(string titulo, Int16 año)
+        {
+            
+        }
      
         //Métodos
         public void SetTitulo(string t)
@@ -35,11 +43,10 @@ namespace Pelicula
             return año;
         }
      
-        /*public void Imprime()
+        public void Imprime()
         {
-            //Console.WriteLine($"{titulo} {año}");
-            Console.WriteLine("La pelicula es {0}, que se estreno en el año {1}." , titulo , año);
-        }*/
+            Console.WriteLine($"{titulo} {año}");
+        }
 
 
     }
