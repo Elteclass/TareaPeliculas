@@ -58,6 +58,7 @@ namespace Pelicula
         {
             Console.WriteLine($"{titulo} ({año})");
         }
+        
 
 
         public void AgregaActor(Actor actor)
