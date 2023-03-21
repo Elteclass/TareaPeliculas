@@ -29,10 +29,10 @@ namespace Pelicula
             director = d;
         }
 
-        public Pelicula(string v1, int v2)
+        public Pelicula(string v1, Int16 v2)
         {
-            V1 = v1;
-            V2 = v2;
+            titulo = v1;
+            año = v2;
         }
 
         //Métodos
@@ -56,8 +56,9 @@ namespace Pelicula
      
         public void Imprime()
         {
-            Console.WriteLine($"{titulo} {año}");
+            Console.WriteLine($"{titulo} ({año})");
         }
+
 
         public void AgregaActor(Actor actor)
         {
@@ -127,7 +128,7 @@ namespace Pelicula
             p1.SetTitulo("La La Land");
             p1.SetAño(2016);
             Console.WriteLine("{0}({1})", p1.GetTitulo(), p1.GetAño());
-            p1.Imprime();
+            
 
             //Lista de peliculas
             List <string> peliculas = new List<string>();
@@ -151,6 +152,7 @@ namespace Pelicula
             p2.AgregaActor(new Actor("Emma Stone", 1988));
 
             Console.WriteLine("Los actores son:");
+            p2.Imprime();
             p2.ImprimeActores();
             
         }
