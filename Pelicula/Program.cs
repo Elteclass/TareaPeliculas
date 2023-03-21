@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace Pelicula
 {
-
     public class Pelicula
     {
         //Campos
@@ -77,7 +76,6 @@ namespace Pelicula
             Nombre = nom;
             Año = a;
         }
-
         //Métodos 
         public void Setnombre(string nom)
         {
@@ -143,8 +141,6 @@ namespace Pelicula
             p1.AgregaActor(new Actor("Emma Stone", 1988));
 
             p1.ImprimeActores();
-
-            
             
         }
     }
