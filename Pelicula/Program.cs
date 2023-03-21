@@ -12,7 +12,10 @@ namespace Pelicula
         private string director;
 
         private List<Actor> actores = new List<Actor>();
-        
+
+        public string V1 { get; }
+        public int V2 { get; }
+
         //Constructores
         public Pelicula()
         {
@@ -25,7 +28,13 @@ namespace Pelicula
             país = p;
             director = d;
         }
-     
+
+        public Pelicula(string v1, int v2)
+        {
+            V1 = v1;
+            V2 = v2;
+        }
+
         //Métodos
         public void SetTitulo(string t)
         {
@@ -136,12 +145,12 @@ namespace Pelicula
             }
 
             //Lista de actores
-            //Pelicula p1 = new Pelicula("La La Land", 2016);
-            p1.AgregaActor(new Actor("Ryan Gosling", 1980));
-            p1.AgregaActor(new Actor("Emma Stone", 1988));
+            Pelicula p2 = new Pelicula("La La Land", 2016);
+            p2.AgregaActor(new Actor("Ryan Gosling", 1980));
+            p2.AgregaActor(new Actor("Emma Stone", 1988));
 
             Console.WriteLine("Los actores son:");
-            p1.ImprimeActores();
+            p2.ImprimeActores();
             
         }
     }
