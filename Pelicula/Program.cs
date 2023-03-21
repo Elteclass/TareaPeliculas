@@ -117,8 +117,8 @@ namespace Pelicula
 
         static void Main(string[] args)
         {
-            /*
-            Pelicula p1 = new Pelicula("La la land", 2016, "Estados Unidos", "Damien Chazelle");
+            
+            /*Pelicula p1 = new Pelicula("La la land", 2016, "Estados Unidos", "Damien Chazelle");
             Pelicula p2 = new Pelicula("El renacido", 2015, "Estados Unidos", "Alejandro Gonzáles Iñárritu");
             p1.Imprime();
             p2.Imprime();
@@ -127,6 +127,7 @@ namespace Pelicula
             p1.SetTitulo("La La Land");
             p1.SetAño(2016);
             Console.WriteLine("{0}({1})", p1.GetTitulo(), p1.GetAño());
+            p1.Imprime();
 
             //Lista de peliculas
             List <string> peliculas = new List<string>();
